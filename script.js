@@ -1,5 +1,5 @@
 let pokemonList = [
-    let bulbasaur = {
+    {
         name: 'Bulbasaur',
         height: '0.7 m',
         types: [
@@ -8,7 +8,7 @@ let pokemonList = [
         ]
     },
 
-    let charmander = {
+    {
         name: 'Charmander',
         height: '0.6 m',
         types = [
@@ -16,7 +16,7 @@ let pokemonList = [
         ]
     },
 
-    let squirtle = {
+    {
         name: 'Squirtle',
         height: '0.5 m',
         types = [
@@ -24,14 +24,15 @@ let pokemonList = [
         ]
     },
 
-    let pikachu = {
+    {
         name: 'Pikachu',
         height: '0.4 m',
         types = [
             'electric'
         ],
+    },
 
-    let gengar = {
+    {
         name: 'Gengar',
         height: '1.5 m',
         types = [
@@ -39,5 +40,5 @@ let pokemonList = [
             'poison'
         ]
     }
-    }
+    
 ]
