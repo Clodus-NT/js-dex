@@ -11,7 +11,7 @@ let pokemonList = [
     {
         name: 'Charmander',
         height: '0.6 m',
-        types = [
+        types: [
             'fire'
         ]
     },
@@ -19,7 +19,7 @@ let pokemonList = [
     {
         name: 'Squirtle',
         height: '0.5 m',
-        types = [
+        types: [
             'water'
         ]
     },
@@ -27,7 +27,7 @@ let pokemonList = [
     {
         name: 'Pikachu',
         height: '0.4 m',
-        types = [
+        types: [
             'electric'
         ],
     },
@@ -35,7 +35,7 @@ let pokemonList = [
     {
         name: 'Gengar',
         height: '1.5 m',
-        types = [
+        types: [
             'ghost',
             'poison'
         ]
