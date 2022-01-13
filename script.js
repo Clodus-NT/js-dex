@@ -66,20 +66,12 @@ let pokemonRepository = (function() {
 //Checks the height of each pokemon
 //and prints corresponding message
 
-// for (let i = 0; i < pokemonList.length; i++) {
-//     if (pokemonList[i].height > 1) {
-//         document.write(
-//             pokemonList[i].name + " (height: " + pokemonList[i].height + ")" + " - Wow! That's a big Pokemon" + "<br>");
-//     } else {
-//         document.write(
-//             pokemonList[i].name + " (height: " + pokemonList[i].height + ")" + "<br>");
-//     }
-// }
-
-pokemonRepository.forEach(function(pokemon) {
-    document.write(
-        // pokemonList.name + '<br>' + 'Height: ' + pokemonList.height + '<br>' + 'Type: ' + pokemonList.types + '<br>' + '<br>'
-        pokemonRepository.getAll()
-    );
+pokemonRepository.getAll().forEach(function (pokemon) {
+    if (pokemon.height > 1) {
+        document.write(
+            pokemon.name + " (height: " + pokemon.height + ")" + " - Wow! That's a big Pokemon" + "<br>");
+        } else {
+          document.write(
+            pokemon.name + " (height: " + pokemon.height + ")" + "<br>");
     }
-)
+})
