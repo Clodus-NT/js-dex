@@ -55,23 +55,27 @@ let pokemonRepository = (function() {
         return pokemonList;
     }
 
+    function addListItem(pokemon) {
+        let pokemonUl = document.querySelector('.pokemon-list');
+
+        let listItem = document.createElement('li');
+
+        let button = document.createElement('button');
+        button.innerText = pokemon.name;
+        button.classList.add('button');
+
+        listItem.appendChild(button);
+        pokemonUl.appendChild(listItem);
+    }
+
     return {
         add: add,
-        getAll: getAll
+        getAll: getAll,
+        addListItem: addListItem
     };
 
 })();
 
-
-//Checks the height of each pokemon
-//and prints corresponding message
-
 pokemonRepository.getAll().forEach(function (pokemon) {
-    if (pokemon.height > 1) {
-        document.write(
-            pokemon.name + " (height: " + pokemon.height + ")" + " - Wow! That's a big Pokemon" + "<br>");
-        } else {
-          document.write(
-            pokemon.name + " (height: " + pokemon.height + ")" + "<br>");
-    }
+    pokemonRepository.addListItem(pokemon);
 })
