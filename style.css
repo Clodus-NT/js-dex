@@ -27,3 +27,7 @@ body {
     width: 250px;
     font-size: 35px;
 }
+
+.button:hover {
+    opacity: 80%;
+}

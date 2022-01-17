@@ -54,7 +54,8 @@ let pokemonRepository = (function() {
     function getAll() {
         return pokemonList;
     }
-
+    // Creates a button for each Pokemon
+    // When clicked, the button console logs the name
     function addListItem(pokemon) {
         let pokemonUl = document.querySelector('.pokemon-list');
 
@@ -66,6 +67,12 @@ let pokemonRepository = (function() {
 
         listItem.appendChild(button);
         pokemonUl.appendChild(listItem);
+
+        button.addEventListener('click', showDetails);
+    }
+
+    function showDetails(pokemon) {
+        console.log(pokemon.name);
     }
 
     return {
