@@ -67,7 +67,6 @@ let pokemonRepository = (function() {
     }
 
     //Show Modal
-
     function showModal (/*may need to change*/pokemon) {
         let modalContainer = document.querySelector('#modal-container');
 
@@ -81,6 +80,7 @@ let pokemonRepository = (function() {
         let closeButtonElement = document.createElement('button');
         closeButtonElement.classList.add('modal-close');
         closeButtonElement.innerText = 'X';
+        closeButtonElement.addEventListener('click', hideModal);
             //Title (name)
         let titleElement = document.createElement('h1');
         titleElement.innerText = pokemon.name;
@@ -99,6 +99,28 @@ let pokemonRepository = (function() {
 
         modalContainer.classList.add('is-visible');
     }
+
+    //Hide Modal
+    function hideModal() {
+        let modalContainer = document.querySelector('#modal-container');
+        modalContainer.classList.remove('is-visible');
+    }
+
+    //Esc key functionality
+    window.addEventListener('keydown', (e) => {
+        let modalContainer = document.querySelector('#modal-container');
+        if (e.key === 'Escape' && modalContainer.classList.contains('is-visible')) {
+            hideModal();
+        }
+    });
+
+    //Clicking outside of modal functionality
+    modalContainer.addEventListener('click', (e) => {
+        let target = e.target;
+        if (target === modalContainer) {
+            hideModal();
+        }
+    });
 
     return {
         add: add,

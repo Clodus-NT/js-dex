@@ -30,6 +30,7 @@ body {
 
 .button:hover {
     opacity: 80%;
+    cursor: pointer;
 }
 
 #modal-container {
@@ -67,10 +68,17 @@ body {
   .modal-close {
     float: right;
     -webkit-appearance: none;
-    border: 0;
+    border: solid;
+    border-color: rgb(133, 133, 133);
+    border-radius: 25%;
     background: none;
-    color: #777;
-    text-decoration: underline;
+    color: rgb(69, 69, 69);
+    text-decoration: none;
+  }
+
+  .modal-close:hover {
+    opacity: 80%;
+    cursor: pointer;
   }
   
   .modal h1 {
