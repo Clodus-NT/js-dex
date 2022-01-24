@@ -1,5 +1,6 @@
 //IIFE containing an empty array, Pokemon API, and button creator
 let pokemonRepository = (function() {
+    let modalContainer = document.querySelector('#modal-container');
     //Empty Array that will draw from the API
     let pokemonList = [];
     //Variable holding the API URL
@@ -58,11 +59,45 @@ let pokemonRepository = (function() {
             console.error(e);
         });
     }
-
+    //Show Details
     function showDetails(item) {
         pokemonRepository.loadDetails(item).then(function () {
-            console.log(item);
+            showModal(item);
         });
+    }
+
+    //Show Modal
+
+    function showModal (/*may need to change*/pokemon) {
+        let modalContainer = document.querySelector('#modal-container');
+
+        //Clear existing modal content
+        modalContainer.innerHTML = '';
+
+        let modal = document.createElement('div');
+        modal.classList.add('modal');
+
+        //Add new content
+        let closeButtonElement = document.createElement('button');
+        closeButtonElement.classList.add('modal-close');
+        closeButtonElement.innerText = 'X';
+            //Title (name)
+        let titleElement = document.createElement('h1');
+        titleElement.innerText = pokemon.name;
+            //Sprite
+        let imgElement = document.createElement('img');
+        imgElement.src = pokemon.imageUrl;
+            //Stats
+        let contentElement = document.createElement('p');
+        contentElement.innerText ='Height: ' + pokemon.height
+
+        modal.appendChild(closeButtonElement);
+        modal.appendChild(titleElement);
+        modal.appendChild(imgElement);
+        modal.appendChild(contentElement);
+        modalContainer.appendChild(modal);
+
+        modalContainer.classList.add('is-visible');
     }
 
     return {
