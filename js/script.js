@@ -62,6 +62,11 @@ let pokemonRepository = (function() {
             for (let i = 0; i < details.types.length; i++) {
                 item.types.push(details.types[i].type.name);
             }
+            item.abilities = [];
+            //Loop for each pokemon's abilities
+            for (let i = 0; i < details.abilities.length; i++) {
+                item.abilities.push(details.abilities[i].ability.name);
+            }
         }).catch(function (e) {
             console.error(e);
         });
@@ -95,6 +100,8 @@ let pokemonRepository = (function() {
         let weightElement = $("<p>" + "Weight : " + pokemon.weight + "</p>");
         //Types
         let typesElement = $('<p>' + "Types : " + pokemon.types + "</p>");
+        //Abilities
+        let abilitiesElement = $('<p>' + "Abilities : " + pokemon.abilities + "</p>");
     
         modalTitle.append(nameElement);
         modalBody.append(imageElementFront);
@@ -102,7 +109,8 @@ let pokemonRepository = (function() {
         modalBody.append(heightElement);
         modalBody.append(weightElement);
         modalBody.append(typesElement);
-
+        modalBody.append(abilitiesElement);
+        //Toggles Modal
         $('#exampleModal').modal();
       }
     
