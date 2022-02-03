@@ -26,10 +26,20 @@ body {
   padding: 15px;
   width: 300px;
   font-size: 35px;
+  text-transform: capitalize;
 }
 
 .btn:hover {
   opacity: 85%;
+}
+
+.modal-header {
+  text-transform: capitalize;
+}
+
+.modal-body {
+  font-size: large;
+  text-transform: capitalize;
 }
 
 .modal-footer {
