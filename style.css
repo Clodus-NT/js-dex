@@ -2,16 +2,28 @@ body {
   background-color: #5a5b65;
 }
 
+.header {
+  border-bottom: solid;
+  border-color: #b24df5;
+  background-color: #770fdf;
+}
+
 .page-header {
   text-align: center;
   font-size: 100px;
   color: #FFDE00;
 }
 
+.header-quote {
+  text-align: center;
+  font-size: 30px;
+  color: #FFDE00;
+}
+
 .pokemon-list {
   list-style-type: none;
   margin: 0;
-  padding: 0;
+  padding-top: 20px;
   justify-content: center;
 }
 
