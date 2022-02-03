@@ -57,6 +57,11 @@ let pokemonRepository = (function() {
             item.imageUrlBack = details.sprites.back_default;
             item.height = details.height;
             item.weight = details.weight;
+            item.types = [];
+            //Loop for each pokemon's types
+            for (let i = 0; i < details.types.length; i++) {
+                item.types.push(details.types[i].type.name);
+            }
         }).catch(function (e) {
             console.error(e);
         });
@@ -85,15 +90,18 @@ let pokemonRepository = (function() {
         let imageElementBack = $('<img class="modal-img" style="width:50%">');
         imageElementBack.attr("src", pokemon.imageUrlBack);
         //Height
-        let heightElement = $("<p>" + "height : " + pokemon.height + "</p>");
+        let heightElement = $("<p>" + "Height : " + pokemon.height + "</p>");
         //Weight
-        let weightElement = $("<p>" + "weight : " + pokemon.weight + "</p>");
+        let weightElement = $("<p>" + "Weight : " + pokemon.weight + "</p>");
+        //Types
+        let typesElement = $('<p>' + "Types : " + pokemon.types + "</p>");
     
         modalTitle.append(nameElement);
         modalBody.append(imageElementFront);
         modalBody.append(imageElementBack);
         modalBody.append(heightElement);
         modalBody.append(weightElement);
+        modalBody.append(typesElement);
 
         $('#exampleModal').modal();
       }
