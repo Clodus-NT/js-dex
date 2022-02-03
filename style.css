@@ -1,99 +1,34 @@
 body {
-    background-color: #3B4CCA;
+  background-color: #5a5b65;
 }
 
 .page-header {
-    text-align: center;
-    font-size: 100px;
-    color: #FFDE00;
+  text-align: center;
+  font-size: 100px;
+  color: #FFDE00;
 }
 
 .pokemon-list {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    text-align: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
 }
 
 .button {
-    border-style: solid;
-    border-width: thick;
-    border-color: #FF0000;
-    border-radius: 25px;
-    background-color: #FFDE00;
-    color: #3B4CCA;
-    margin: 10px;
-    padding: 10px;
-    width: 250px;
-    font-size: 35px;
+  border-style: solid;
+  border-width: thick;
+  border-color: #FF0000;
+  border-radius: 25px;
+  background-color: #FFDE00;
+  color: #3B4CCA;
+  margin: 10px;
+  padding: 10px;
+  width: 250px;
+  font-size: 35px;
 }
 
 .button:hover {
-    opacity: 80%;
-    cursor: pointer;
+  opacity: 80%;
+  cursor: pointer;
 }
-
-#modal-container {
-    position: fixed;
-    padding: 20px;
-    box-sizing: border-box;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    
-    /* to show it above other content */
-    z-index: 999; 
-    
-    /* to allow scrolling if the screen is not high enough*/
-    overflow: auto; 
-    
-    /* this is used to center the modal */
-    display: grid;
-    text-align: center;
-  }
-  
-  .modal {
-    margin: auto;
-    display: inline-block;
-    box-sizing: border-box;
-    background: #fff;
-    padding: 15px;
-    width: 100%;
-    max-width: 700px;
-    text-align: center;
-  }
-  
-  .modal-close {
-    float: right;
-    -webkit-appearance: none;
-    border: solid;
-    border-color: rgb(133, 133, 133);
-    border-radius: 25%;
-    background: none;
-    color: rgb(69, 69, 69);
-    text-decoration: none;
-  }
-
-  .modal-close:hover {
-    opacity: 80%;
-    cursor: pointer;
-  }
-  
-  .modal h1 {
-    margin-top: 0;
-  }
-  
-  .modal p {
-    margin-bottom: 0;
-  }
-  
-  #modal-container {
-    display: none;
-  }
-  
-  #modal-container.is-visible {
-    /* CSS for modal container - add your own desired CSS styles here */
-    display: block;
-  }
