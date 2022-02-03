@@ -15,20 +15,15 @@ body {
   text-align: center;
 }
 
-.button {
+.btn {
   border-style: solid;
   border-width: thick;
-  border-color: #FF0000;
+  border-color: #b24df5;
   border-radius: 25px;
   background-color: #FFDE00;
-  color: #3B4CCA;
+  color: #4657d7;
   margin: 10px;
-  padding: 10px;
-  width: 250px;
+  padding: 15px;
+  width: 300px;
   font-size: 35px;
-}
-
-.button:hover {
-  opacity: 80%;
-  cursor: pointer;
 }

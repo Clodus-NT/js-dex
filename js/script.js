@@ -17,6 +17,8 @@ let pokemonRepository = (function() {
 
         let listItem = document.createElement('li');
         listItem.classList.add('group-list-item');
+        listItem.classList.add('col-2');
+        
 
         let button = document.createElement('button');
         button.innerText = pokemon.name;
@@ -28,6 +30,33 @@ let pokemonRepository = (function() {
 
         button.addEventListener('click', () => showDetails(pokemon));
     }
+    // function addListItem(pokemon) {
+    //     pokemonRepository.loadDetails(pokemon).then(function () {
+    //       let $row = $(".row");
+    
+    //       let $card = $('<div class="card poke-card" style="width:400px"></div>');
+    //       let $image = $(
+    //         '<img class="card-img-top" alt="Card image" style="width:20%" />'
+    //       );
+    //       $image.attr("src", pokemon.imageUrlFront);
+    //       let $cardBody = $('<div class="card-body"></div>');
+    //       let $cardTitle = $("<h4 class='card-title' >" + pokemon.name + "</h4>");
+    //       let $seeProfile = $(
+    //         '<button type="button" class="btn btn-primary button" data-toggle="modal" data-target="#exampleModal">See Details</button>'
+    //       );
+    
+    //       $row.append($card);
+    //       //Append the image to each card
+    //       $card.append($image);
+    //       $card.append($cardBody);
+    //       $cardBody.append($cardTitle);
+    //       $cardBody.append($seeProfile);
+    
+    //       $seeProfile.on("click", function (event) {
+    //         showDetails(pokemon);
+    //       });
+    //     });
+    //   }
 
     //Loads list of Pokemon
     function loadList() {
