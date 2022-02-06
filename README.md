@@ -8,3 +8,5 @@ I utilized the following to make the application:
 -A pokemon related API
 
 The goal of this project was to familiarize myself with the listed languages and libraries as well as the concepts needed to implement them.
+
+Check it out! https://clodus-nt.github.io/js-dex/
